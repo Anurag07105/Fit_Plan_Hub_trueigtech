@@ -1,4 +1,4 @@
-from pydantic import BaseModel
+from pydantic import BaseModel , EmailStr
 
 class Signupschema(BaseModel):
     name: str
@@ -12,3 +12,9 @@ class Signupschema(BaseModel):
 class Loginschema(BaseModel):
     email: str
     password: str    
+
+class UserResponse(BaseModel):
+    id: str
+    name: str
+    email: EmailStr
+    role: str    
